@@ -19,7 +19,7 @@ export default function Chat() {
     connectToWs();
   }, [selectedUserId]);
   function connectToWs() {
-    const ws = new WebSocket('ws:https://mern-chat-api-theta.vercel.app/');
+    const ws = new WebSocket('ws://mern-chat-api-theta.vercel.app:4040');
     setWs(ws);
     ws.addEventListener('message', handleMessage);
     ws.addEventListener('close', () => {
